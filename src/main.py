@@ -22,3 +22,9 @@ async def get_parse(message: OCRText):
         return {"success": True, "message": "Found OCR values!", "values": return_value}
     else:
         return {"success": False, "message": "Internal error!"}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8050)
